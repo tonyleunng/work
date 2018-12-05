@@ -25,23 +25,10 @@
   font-size: 30px;
 }
 
-#m1 a {
-  border: 0px dotted orange;
-  color: orange;
-  padding: 0px;
-}
-
-
-
-
-
-
-
 
 a:link, a:visited {
     color: #ffffff;
 }
-
 
 
 body {
@@ -352,13 +339,8 @@ p {
 <body>
 
 <div id="m1" class="marquee"><span style="white-space:nowrap;">
-  TONY LEUNG  &#x25CF;  TONY LEUNG  &#x25CF; 
-TONY LEUNG  &#x25CF; 
+  TONY LEUNG &#x25CF; TONY LEUNG &#x25CF; TONY LEUNG &#x25CF; 
 </span></div>
-
-
-
-
 
 
 
@@ -627,8 +609,6 @@ TONY LEUNG  &#x25CF;
 
 function start() {
    new mq('m1');
-   new mq('m2');
-   // new mq('m3');  // add as many marquees as you like
    mqRotate(mqr); // must come last
 }
 window.onload = start;
