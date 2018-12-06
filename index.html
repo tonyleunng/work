@@ -121,7 +121,11 @@ p {
   font-style: italic; 
 }        
     
-
+.active4, .collapsible14:hover {
+  
+  font-style: italic; 
+}        
+    
 .content {
   padding: 0 0px;
   max-height: 0;
@@ -314,7 +318,7 @@ p {
 }
     
 .collapsible13 {
-  background-color: #9966CC;
+  background-color: #ff8000;
   letter-spacing: -1px;
   color: #000;
   cursor: pointer;
@@ -328,6 +332,20 @@ p {
   font-family: 'San Francisco', Helvetica, Arial, san-serif;
 }    
     
+.collapsible14 {
+  background-color: #ea1aff;
+  letter-spacing: -1px;
+  color: #000;
+  cursor: pointer;
+  padding: 1px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 9vw;
+  line-height: 90%;
+  font-family: 'San Francisco', Helvetica, Arial, san-serif;
+}  
     
     
 @media screen and (min-width: 1540px) {
@@ -629,6 +647,39 @@ p {
   <img src="fightfont3.jpg" alt="" class="responsive">
 </div>    
 
+ 
+<button class="collapsible14">HKIFF38</button>
+<div class="content">
+  <div class="example">
+  <p>Identity Proposal design for the 38th Hong Kong International Film Festival</p>
+  <p>Graphic Identity, Website Design, 2014, Self Project</p></div>
+  <img src="hkiff38_6.jpg" alt="" class="responsive">
+
+  <div class="row">
+  <div class="column" >
+    <img src="hkiff38_8.jpg" alt="" class="responsive">
+  </div>
+  <div class="column" >
+    <img src="hkiff38_7.jpg" alt="" class="responsive">
+  </div>
+</div>    
+    
+<img src="hkiff38_4.jpg" alt="" class="responsive">
+<img src="hkiff38_5.jpg" alt="" class="responsive">
+<img src="hkiff38_1.jpg" alt="" class="responsive">
+    
+  <div class="row">
+  <div class="column" >
+    <img src="hkiff38_2.jpg" alt="" class="responsive">
+  </div>
+  <div class="column" >
+    <img src="hkiff38_3.jpg" alt="" class="responsive">
+  </div>
+</div>     
+    
+    
+</div>    
+    
 
 <button class="collapsible12">ABOUT ME</button>
 <div class="content">
@@ -867,6 +918,22 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }        
+    
+    
+var coll = document.getElementsByClassName("collapsible14");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active14");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}   
     
 
 </script>
