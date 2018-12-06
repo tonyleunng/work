@@ -114,7 +114,12 @@ p {
 .active4, .collapsible12:hover {
   
   font-style: italic; 
-}    
+}   
+    
+.active4, .collapsible13:hover {
+  
+  font-style: italic; 
+}        
     
 
 .content {
@@ -307,6 +312,21 @@ p {
   line-height: 90%;
   font-family: 'San Francisco', Helvetica, Arial, san-serif;
 }
+    
+.collapsible13 {
+  background-color: #ff4a0c;
+  letter-spacing: -1px;
+  color: #000;
+  cursor: pointer;
+  padding: 1px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 9vw;
+  line-height: 90%;
+  font-family: 'San Francisco', Helvetica, Arial, san-serif;
+}    
     
     
     
@@ -597,6 +617,17 @@ p {
   <img src="cpab3.jpg" alt="" class="responsive">
   <img src="cpab4.jpg" alt="" class="responsive">
 </div>
+    
+<button class="collapsible13">FIGHTING FONT</button>
+<div class="content">
+  <div class="example">
+  <p>Jockey Club Community Performing Arts Biennale (CPAB), held in 2016, provided a platform for the public to be in touch with the performing arts. We designd the identity of it.</p>
+  <p>Poster, Typography, 2013, Self Project</p></div>
+
+  <img src="fightfont1.jpg" alt="" class="responsive">
+  <img src="fightfont2.jpg" alt="" class="responsive">
+  <img src="fightfont3.jpg" alt="" class="responsive">
+</div>    
 
 
 <button class="collapsible12">ABOUT ME</button>
@@ -821,6 +852,21 @@ for (i = 0; i < coll.length; i++) {
   });
 }    
     
+ 
+var coll = document.getElementsByClassName("collapsible13");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active13");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}        
     
 
 </script>
